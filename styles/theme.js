@@ -1,4 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
+import { darken, whiten } from "@chakra-ui/theme-tools";
 
 const theme = extendTheme({
   fonts: {
@@ -7,6 +8,49 @@ const theme = extendTheme({
   },
   colors: {
     mainRed: "#AB0F62",
+  },
+  components: {
+    Button: {
+      baseStyle: {},
+      sizes: {
+        md: {
+          h: 14,
+        },
+      },
+      variants: {
+        primary: {
+          bgColor: "mainRed",
+          border: "1px solid #AB0F62",
+          _hover: {
+            bgColor: darken("mainRed", 10),
+          },
+        },
+        secondary: {
+          color: "white",
+          bgColor: "transparent",
+          border: "1px solid white",
+          _hover: {
+            color: darken("mainRed", 10),
+            borderColor: darken("mainRed", 10),
+          },
+        },
+      },
+    },
+    Tag: {
+      baseStyle: {
+        container:{
+          bgColor: "transparent",
+          color: "white",
+          border: "1px solid rgba(255, 255, 255, 0.24)",
+          h: 14,
+          padding: "20px !important",
+        textAlign: "center"
+        }
+      },
+      defaultProps:{
+        variant: "none"
+      }
+    },
   },
 });
 

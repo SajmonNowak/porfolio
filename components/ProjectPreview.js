@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Flex, Text, Box, Center } from "@chakra-ui/layout";
 
-const ProjectPreview = ({ item, openProjectModal }) => {
+const ProjectPreview = ({ item }) => {
   const [activated, setActivated] = useState(false);
 
   return (
@@ -11,7 +11,6 @@ const ProjectPreview = ({ item, openProjectModal }) => {
         h="100%"
         onMouseEnter={() => setActivated(true)}
         onMouseLeave={() => setActivated(false)}
-        onClick={openProjectModal}
       >
         {!activated && (
           <Box

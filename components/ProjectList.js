@@ -19,8 +19,9 @@ const ProjectList = ({ openProjectModal }) => {
           minHeight="10vw"
           bgColor="red"
           key={index}
+          onClick={() =>  openProjectModal(item.name)}
         >
-          <ProjectPreview item={item} openProjectModal={openProjectModal} />
+          <ProjectPreview item={item}  />
         </GridItem>
       ))}
     </Grid>

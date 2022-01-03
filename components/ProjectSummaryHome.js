@@ -30,7 +30,7 @@ const ProjectSummary = ({openProjectModal}) => {
         </Grid>
         <Center>
           <Link href="/projects">
-          <Button bgColor={theme.colors.mainRed} w="200px" mt="80px">
+          <Button variant="primary" bgColor={theme.colors.mainRed} w="200px" mt="80px">
             See more
           </Button>
           </Link>

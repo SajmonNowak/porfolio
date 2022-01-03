@@ -6,11 +6,13 @@ import {VscChromeClose} from "react-icons/vsc"
 
 const Modal = ({projectName, setOpenModal}) => {
     return (
-        <Box className="scrollBar" position="fixed" bgColor="black" margin="0 auto" maxW="1440px" w="90%" height="90%" border="1px solid grey"  bottom="0" overflowY="overlay"> 
-            <Flex direction="column"  position="relative"  >
-                <Icon onClick={() => setOpenModal(false)} as={VscChromeClose} position="absolute" top="0px" right="0px" w="40px" h="40px"/>
+        <Box position="fixed" top="0" left="0" bgColor="rgba(0,0,0,0.95)" w="100vw" h="100vh" zIndex="99999">
+        <Box className="scrollBar"  bgColor="black" margin="0 auto" mt="10vh" maxW="1440px" w="90%" height="90vh" border="1px solid rgba(255, 255, 255, 0.24)" borderRadius="10px" bottom="0" overflowY="overlay"> 
+            <Flex direction="column"  position="relative" py="50px" >
+                <Icon onClick={() => setOpenModal(false)} as={VscChromeClose} position="absolute" top="50px" right="50px" w="40px" h="40px"/>
                <ProjectInfoPage projectName = {projectName}/>
             </Flex>
+        </Box>
         </Box>
         
     )
