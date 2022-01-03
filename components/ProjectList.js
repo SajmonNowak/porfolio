@@ -4,7 +4,7 @@ import React from "react";
 import projectData from "../data/projectData";
 import ProjectPreview from "./ProjectPreview";
 
-const ProjectList = ({ openProjectModal }) => {
+const ProjectList = ({ openProjectModal, home }) => {
   return (
     <Grid
       templateColumns="repeat(4, 1fr)"
@@ -12,18 +12,35 @@ const ProjectList = ({ openProjectModal }) => {
       gap="20px"
       w="100%"
     >
-      {projectData.map((item, index) => (
-        <GridItem
-          colSpan={item.colspan}
-          rowSpan={item.rowspan ? item.rowspan : 1}
-          minHeight="10vw"
-          bgColor="red"
-          key={index}
-          onClick={() =>  openProjectModal(item.name)}
-        >
-          <ProjectPreview item={item}  />
-        </GridItem>
-      ))}
+      {home
+        ? projectData.map((item, index) => {
+            if (item.mainPage) {
+              return (
+                <GridItem
+                  colSpan={item.colspan}
+                  rowSpan={item.rowspan ? item.rowspan : 1}
+                  minHeight="10vw"
+                  bgColor="red"
+                  key={index}
+                  onClick={() => openProjectModal(item.name)}
+                >
+                  <ProjectPreview item={item} />
+                </GridItem>
+              );
+            }
+          })
+        : projectData.map((item, index) => (
+            <GridItem
+              colSpan={item.colspan}
+              rowSpan={item.rowspan ? item.rowspan : 1}
+              minHeight="10vw"
+              bgColor="red"
+              key={index}
+              onClick={() => openProjectModal(item.name)}
+            >
+              <ProjectPreview item={item} />
+            </GridItem>
+          ))}
     </Grid>
   );
 };

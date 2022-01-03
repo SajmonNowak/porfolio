@@ -1,5 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 import { darken, whiten } from "@chakra-ui/theme-tools";
+import { VscNoNewline } from "react-icons/vsc";
 
 const theme = extendTheme({
   fonts: {
@@ -15,6 +16,7 @@ const theme = extendTheme({
       sizes: {
         md: {
           h: 14,
+          minW: "160px",
         },
       },
       variants: {
@@ -23,6 +25,10 @@ const theme = extendTheme({
           border: "1px solid #AB0F62",
           _hover: {
             bgColor: darken("mainRed", 10),
+          },
+          _focus: {
+            outline: "none",
+            boxShadow: "0 0 0 4px #b35989",
           },
         },
         secondary: {
@@ -33,23 +39,27 @@ const theme = extendTheme({
             color: darken("mainRed", 10),
             borderColor: darken("mainRed", 10),
           },
+          _focus: {
+            outline: "none",
+            boxShadow: "0 0 0 4px #b35989",
+          },
         },
       },
     },
     Tag: {
       baseStyle: {
-        container:{
+        container: {
           bgColor: "transparent",
           color: "white",
           border: "1px solid rgba(255, 255, 255, 0.24)",
           h: 14,
           padding: "20px !important",
-        textAlign: "center"
-        }
+          textAlign: "center",
+        },
       },
-      defaultProps:{
-        variant: "none"
-      }
+      defaultProps: {
+        variant: "none",
+      },
     },
   },
 });

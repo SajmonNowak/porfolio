@@ -1,6 +1,3 @@
-
-
-
 const projectData = [
   {
     name: "Inventory App",
@@ -13,8 +10,8 @@ const projectData = [
       "/images/inventoryapp/inventory.png",
       "/images/inventoryapp/inventory2.png",
       "/images/inventoryapp/inventory3.png",
-      "/images/inventoryapp/inventory4.png"
-    ]
+      "/images/inventoryapp/inventory4.png",
+    ],
   },
   {
     name: "Battleships",
@@ -54,7 +51,7 @@ const projectData = [
     videoURL: "/videos/board.webm",
     tags: ["Express", "NodeJS"],
     desc: "",
-    mainPage: false,
+    mainPage: true,
     colspan: 1,
   },
   {
@@ -62,7 +59,7 @@ const projectData = [
     videoURL: "/videos/shop.webm",
     tags: ["React", "Styled Components"],
     desc: "",
-    mainPage: true,
+    mainPage: false,
     colspan: 4,
   },
   {
