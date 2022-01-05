@@ -13,10 +13,10 @@ const NavBar = () => {
       fontSize="xl"
     >
       <Stack spacing="8" align="center" justify="flex-end" direction="row">
-        <MenuItem name="about()" path={"#about"} />
-        <MenuItem name="skills()" path={"#skills"} />
-        <MenuItem name="portfolio()" path={"#portfolio"} />
-        <MenuItem name="contact()" path={"#contact"} stressed />
+        <MenuItem name="about()" path={"/#about"} />
+        <MenuItem name="skills()" path={"/#skills"} />
+        <MenuItem name="portfolio()" path={"/projects"} />
+        <MenuItem name="contact()" path={"/#contact"} stressed />
       </Stack>
     </Flex>
   );

@@ -5,9 +5,9 @@ import Title from "./Title";
 
 const Skills = () => {
   return (
-    <Flex direction="column" minH="100vh">
+    <Flex direction="column" minH="100vh" id="skills">
       <Title text="SkillsAndTools" />
-      <Box pl="5vw">
+      <Box pl="2vw">
         <Text fontSize="xl" mt="50px">
           let experience; <br /> // Technologies and tools I utilized and
           learned on my programing journey through different projects{" "}

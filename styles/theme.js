@@ -1,6 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
-import { darken, whiten } from "@chakra-ui/theme-tools";
-import { VscNoNewline } from "react-icons/vsc";
+import { darken } from "@chakra-ui/theme-tools";
 
 const theme = extendTheme({
   fonts: {
@@ -28,7 +27,7 @@ const theme = extendTheme({
           },
           _focus: {
             outline: "none",
-            boxShadow: "0 0 0 4px #b35989",
+            boxShadow: "0 0 10px #AB0F62",
           },
         },
         secondary: {
@@ -41,7 +40,7 @@ const theme = extendTheme({
           },
           _focus: {
             outline: "none",
-            boxShadow: "0 0 0 4px #b35989",
+            boxShadow: "0 0 10px #AB0F62",
           },
         },
       },

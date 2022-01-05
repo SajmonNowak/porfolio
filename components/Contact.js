@@ -6,12 +6,13 @@ import Logo from "./Logo";
 const Contact = () => {
   return (
     <Flex
-      pl="5vw"
+      pl="2vw"
       mt="20vh"
       direction="column"
       justify="center"
       alignItems="center"
       minHeight="50vh"
+      id="contact"
     >
       <Text fontSize="5xl">
         Ready to <span style={{ color: theme.colors.mainRed }}>build</span>{" "}

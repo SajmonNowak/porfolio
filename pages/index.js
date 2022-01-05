@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Header from "../components/Header";
@@ -16,6 +16,15 @@ export default function Home() {
     setProjectNameSelected(projectName);
     setOpenModal(true);
   };
+
+  useEffect(() => {
+    if(openModal){
+      document.body.style.overflow = "hidden"
+    } else [
+      document.body.style.overflow = "unset"
+    ]
+  
+  }, [openModal])
 
   return (
     <>

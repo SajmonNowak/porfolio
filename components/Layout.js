@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 
 const Layout = ({ children }) => {
   return (
-    <Box bg="black">
+    <Box bg="black" >
       <Container maxWidth="1440px" w="100vw" color="#FEFFFC" px="8">
         <NavBar />
         {children}

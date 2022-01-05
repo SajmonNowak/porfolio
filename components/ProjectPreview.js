@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Flex, Text, Box, Center } from "@chakra-ui/layout";
+import { darken } from "@chakra-ui/theme-tools";
+
 
 const ProjectPreview = ({ item }) => {
   const [activated, setActivated] = useState(false);
@@ -11,6 +13,19 @@ const ProjectPreview = ({ item }) => {
         h="100%"
         onMouseEnter={() => setActivated(true)}
         onMouseLeave={() => setActivated(false)}
+        transition="0.5s"
+        _focus={{
+          color: darken("mainRed", 10),
+          boxShadow: "0 0 10px #AB0F62",
+          border:"none",
+          outline: "none",
+        }}
+        _hover={{
+          color: darken("mainRed", 10),
+          boxShadow: "0 0 20px #AB0F62",
+        }}
+        tabIndex="1"
+
       >
         {!activated && (
           <Box

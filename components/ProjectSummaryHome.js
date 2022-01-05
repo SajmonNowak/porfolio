@@ -11,9 +11,9 @@ import ProjectList from "./ProjectList";
 
 const ProjectSummary = ({ openProjectModal }) => {
   return (
-    <Flex direction="column">
+    <Flex direction="column" id="portfolio">
       <Title text="Projects" />
-      <Box pl="5vw" mt="50px">
+      <Box pl="2vw" mt="50px">
         <ProjectList home={true} openProjectModal={openProjectModal} />
         <Center>
           <Link href="/projects">
@@ -22,6 +22,7 @@ const ProjectSummary = ({ openProjectModal }) => {
               bgColor={theme.colors.mainRed}
               w="200px"
               mt="80px"
+              tabIndex="1"
             >
               See more
             </Button>
