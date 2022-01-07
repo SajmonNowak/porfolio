@@ -8,7 +8,7 @@ const SkillList = ({level}) => {
         <Flex wrap="wrap" mt="50px">
             {skillData.map((skill) => {
                 if(skill.level === level){
-                    return <SkillLogo skill = {skill}/>
+                    return <SkillLogo skillName = {skill.name}/>
                 }       
         })}
         </Flex>

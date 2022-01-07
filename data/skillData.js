@@ -36,7 +36,7 @@ const skillData = [
     icon: SiHtml5,
   },
   {
-    name: "React",
+    name: "Sass",
     level: "Pro",
     icon: FaSass,
   },

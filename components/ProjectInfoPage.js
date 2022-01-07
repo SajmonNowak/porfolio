@@ -8,13 +8,14 @@ import Title from "./Title";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Slider from "./Slider";
+import SkillTag from "./SkillTag";
 
 const ProjectInfoPage = ({ projectName }) => {
   const itemData = projectData.find((elem) => elem.name === projectName);
 
   const generateTags = () => {
     const tagArray = itemData.tags.map((tag, index) => (
-      <Tag ml={index === 0 ? undefined : "6px"}>{tag}</Tag>
+      <SkillTag index={index} tag={tag} />
     ));
 
     return tagArray;

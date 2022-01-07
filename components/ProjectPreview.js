@@ -16,13 +16,13 @@ const ProjectPreview = ({ item }) => {
         transition="0.5s"
         _focus={{
           color: darken("mainRed", 10),
-          boxShadow: "0 0 10px #AB0F62",
+          boxShadow: "0 0 15px #AB0F62",
           border:"none",
           outline: "none",
         }}
         _hover={{
           color: darken("mainRed", 10),
-          boxShadow: "0 0 20px #AB0F62",
+          boxShadow: "0px 0 15px #AB0F62",
         }}
         tabIndex="1"
 
@@ -59,3 +59,6 @@ const ProjectPreview = ({ item }) => {
 };
 
 export default ProjectPreview;
+
+
+

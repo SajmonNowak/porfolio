@@ -20,7 +20,6 @@ const ProjectList = ({ openProjectModal, home }) => {
                   colSpan={item.colspan}
                   rowSpan={item.rowspan ? item.rowspan : 1}
                   minHeight="10vw"
-                  bgColor="red"
                   key={index}
                   onClick={() => openProjectModal(item.name)}
                 >

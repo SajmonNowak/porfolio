@@ -1,11 +1,13 @@
-import { Image } from "@chakra-ui/image";
-import { Box, Icon, Link } from "@chakra-ui/react";
+
+import { Icon, Link } from "@chakra-ui/react";
 import data from "../data/socialData";
-import React from "react";
+import React, { useState } from "react";
 import theme from "../styles/theme";
 import { darken } from "@chakra-ui/theme-tools";
 
 const Logo = ({ site, size, ml, mx }) => {
+
+
   return (
       <Link
         href={data[site].url}
