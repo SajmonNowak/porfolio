@@ -1,29 +1,46 @@
-import {
-  Box,
-  Center,
-  Container,
-  Divider,
-  Flex,
-  Heading,
-  Text,
-} from "@chakra-ui/layout";
+import { Box, Divider, Flex, Heading } from "@chakra-ui/layout";
 import Typewriter from "typewriter-effect";
 import React, { useState } from "react";
 import theme from "../styles/theme";
 import Logo from "./Logo";
+import { keyframes } from "@chakra-ui/system";
+
+const grow = keyframes`
+0% {
+  width: 0%
+}
+100%{
+  width: 100%
+}
+`;
+
+const fadein = keyframes`
+0%{
+  opacity: 0;
+}
+100%{
+  opacity 1;
+}
+`;
 
 const Header = () => {
   const [displayHeading, setDisplayHeading] = useState(false);
+  const [finished, setFinished] = useState(false);
 
   const stopTypewriter = () => {
     setDisplayHeading(true);
   };
 
   return (
-    <Box w="100%" h="100vh" paddingTop="25vh" paddingLeft="10vw">
+    <Box
+      w="100%"
+      h="100vh"
+      paddingTop="25vh"
+      paddingLeft={["5%", "5%", "10%", "10%", "10%"]}
+    >
       <Flex direction="column">
-        <Box h="200px">
-          <Heading as="h1" size="3xl">
+        <Box>
+          <Heading as="h1" fontSize={["4xl", "5xl", "5xl", "5xl", "6xl"]}>
             {displayHeading === false ? (
               <Typewriter
                 onInit={(typewriter) => {
@@ -48,7 +65,7 @@ const Header = () => {
           </Heading>
           <Heading
             as="h1"
-            size="xl"
+            fontSize={["xl", "2xl", "2xl", "2xl", "3xl"]}
             fontWeight="normal"
             fontFamily="inconsolata"
             mt="6"
@@ -58,35 +75,45 @@ const Header = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(
-                      `I am a self-tought full-stack webdeveloper <br> with a passion for coding`
+                      `I'm a self-tought full-stack webdeveloper <br> with a passion for coding`
                     )
-                    .pauseFor(1000)
+                    .pauseFor(500)
                     .deleteChars(6)
                     .changeDelay(80)
                     .typeString("developing")
-                    .pauseFor(1000)
+                    .pauseFor(500)
                     .deleteChars(10)
-                    .typeString("creating stuff.")
+                    .typeString("creating awesome stuff.")
+                    .callFunction(() => setFinished(true))
                     .start();
                 }}
                 options={{
                   autoStart: true,
                   loop: false,
                   delay: 20,
-                  deleteSpeed: 60,
+                  deleteSpeed: 40,
                 }}
               />
             )}
           </Heading>
         </Box>
-        <Box w="20%;" minW="150px" mt="50px">
-          <Divider border="2px" borderColor={theme.colors.mainRed} />
-          <Flex d="row" mt="20px">
-            <Logo site="GitHub" size="30px" />
-            <Logo site="LinkedIn" size="30px" ml="20px" />
-            <Logo site="HackerRank" size="30px" ml="20px" />
-          </Flex>
-        </Box>
+        {finished && (
+          <Box w="20%;" minW="150px" mt="50px">
+            <Divider
+              border="2px"
+              borderColor={theme.colors.mainRed}
+              animation={`${grow} 1.25s linear`}
+            />
+            <Flex direction="row" mt="20px" animation={`${fadein} 2s linear `}>
+              <Box w={["24px", "32px"]} h={["24px", "32px"]}>
+                <Logo site="GitHub" />
+              </Box>
+              <Box ml="20px" w={["24px", "32px"]} h={["24px", "32px"]}>
+                <Logo site="LinkedIn" />
+              </Box>
+            </Flex>
+          </Box>
+        )}
       </Flex>
     </Box>
   );

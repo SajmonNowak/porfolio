@@ -10,7 +10,6 @@ const SkillTag = ({ index, tag }) => {
   return (
     <Tag
       position="relative"
-      ml={index === 0 ? undefined : "6px"}
       key={"index-" + index}
       onMouseEnter={() => setShowIcon(true)}
       onMouseLeave={() => setShowIcon(false)}

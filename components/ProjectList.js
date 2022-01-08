@@ -7,7 +7,7 @@ import ProjectPreview from "./ProjectPreview";
 const ProjectList = ({ openProjectModal, home }) => {
   return (
     <Grid
-      templateColumns="repeat(4, 1fr)"
+      templateColumns={["1fr", "1fr", "repeat(4, 1fr)"]}
       templateRows="repeat(auto-fit, 1fr)"
       gap="20px"
       w="100%"
@@ -17,8 +17,8 @@ const ProjectList = ({ openProjectModal, home }) => {
             if (item.mainPage) {
               return (
                 <GridItem
-                  colSpan={item.colspan}
-                  rowSpan={item.rowspan ? item.rowspan : 1}
+                  colSpan={[1, 1, item.colspan]}
+                  rowSpan={[ 1, 1, item.rowspan ? item.rowspan : 1]}
                   minHeight="10vw"
                   key={index}
                   onClick={() => openProjectModal(item.name)}
@@ -30,8 +30,8 @@ const ProjectList = ({ openProjectModal, home }) => {
           })
         : projectData.map((item, index) => (
             <GridItem
-              colSpan={item.colspan}
-              rowSpan={item.rowspan ? item.rowspan : 1}
+              colSpan={[1, 1, item.colspan]}
+              rowSpan={[ 1, 1, item.rowspan ? item.rowspan : 1]}
               minHeight="10vw"
               bgColor="red"
               key={index}

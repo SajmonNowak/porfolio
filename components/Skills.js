@@ -5,18 +5,18 @@ import Title from "./Title";
 
 const Skills = () => {
   return (
-    <Flex direction="column" minH="100vh" id="skills">
+    <Flex direction="column" id="skills">
       <Title text="SkillsAndTools" />
-      <Box pl="2vw">
-        <Text fontSize="xl" mt="50px">
+      <Box pl="2vw" fontSize={["md", "lg", "xl"]}>
+        <Text  mt="50px">
           let experience; <br /> // Technologies and tools I utilized and
           learned on my programing journey through different projects{" "}
         </Text>
-        <Text mt="50px" fontSize="xl">
+        <Text mt="50px" >
           experience = advanced;
         </Text>
         <SkillList level="Pro" />
-        <Text mt="50px" fontSize="xl">
+        <Text mt="50px" >
           experience = basic;{" "}
         </Text>
         <SkillList level="Medium" />

@@ -21,7 +21,7 @@ const Slider = ({
   return (
     <Swiper
       style={{ width: "100%", height: "100%" }}
-      spaceBetween={noSpace ? 0 : 30}
+      spaceBetween={noSpace ? 0 : "5%"}
       slidesPerView={slides}
       freeMode={freeMode ? true : false}
       preloadImages={true}

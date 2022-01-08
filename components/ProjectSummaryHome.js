@@ -11,7 +11,7 @@ import ProjectList from "./ProjectList";
 
 const ProjectSummary = ({ openProjectModal }) => {
   return (
-    <Flex direction="column" id="portfolio">
+    <Flex direction="column" id="portfolio" mt={[20, 20, 40]}>
       <Title text="Projects" />
       <Box pl="2vw" mt="50px">
         <ProjectList home={true} openProjectModal={openProjectModal} />
@@ -24,7 +24,7 @@ const ProjectSummary = ({ openProjectModal }) => {
               mt="80px"
               tabIndex="1"
             >
-              See more
+              View more
             </Button>
           </Link>
         </Center>

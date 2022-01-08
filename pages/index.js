@@ -18,13 +18,10 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if(openModal){
-      document.body.style.overflow = "hidden"
-    } else [
-      document.body.style.overflow = "unset"
-    ]
-  
-  }, [openModal])
+    if (openModal) {
+      document.body.style.overflow = "hidden";
+    } else [(document.body.style.overflow = "unset")];
+  }, [openModal]);
 
   return (
     <>
@@ -39,12 +36,11 @@ export default function Home() {
           <Skills />
           <ProjectSummary openProjectModal={openProjectModal} />
           <Contact />
-          {openModal && (
-            <Modal
-              projectName={projectNameSelected}
-              setOpenModal={setOpenModal}
-            />
-          )}
+          <Modal
+            projectName={projectNameSelected}
+            setOpenModal={setOpenModal}
+            openModal={openModal}
+          />
         </main>
       </Layout>
     </>

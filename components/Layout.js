@@ -4,8 +4,8 @@ import NavBar from "./NavBar";
 
 const Layout = ({ children }) => {
   return (
-    <Box bg="black" >
-      <Container maxWidth="1440px" w="100vw" color="#FEFFFC" px="8">
+    <Box bg="black" overflowX="hidden">
+      <Container maxWidth="1200px" w="100vw" color="#FEFFFC" px="8">
         <NavBar />
         {children}
       </Container>
