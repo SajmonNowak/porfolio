@@ -22,7 +22,12 @@ const Slider = ({
     <Swiper
       style={{ width: "100%", height: "100%" }}
       spaceBetween={noSpace ? 0 : "5%"}
-      slidesPerView={slides}
+      breakpoints={{
+        700: {
+          slidesPerView: slides,
+        },
+      }}
+      slidesPerView={1.2}
       freeMode={freeMode ? true : false}
       preloadImages={true}
       slidesOffsetBefore={noSpace ? 0 : 20}

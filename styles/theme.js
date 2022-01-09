@@ -52,7 +52,7 @@ const theme = extendTheme({
           color: "white",
           border: "1px solid rgba(255, 255, 255, 0.24)",
           h: 14,
-          padding: "20px !important",
+          padding: ["10px !important","20px !important"],
           textAlign: "center",
         },
       },

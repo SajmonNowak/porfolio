@@ -31,7 +31,7 @@ const ProjectInfoPage = ({ projectName }) => {
         </Box>
       </Box>
       <Flex width="100%"  >
-        <Slider slides={1.2} freeMode>
+        <Slider slides={ itemData.dim.x > 1400 ? 1.2 : 2.2} freeMode>
           {itemData.imgs.map((path, index) => {
             return (
               <SwiperSlide style={{padding:"2px 0"}}>
@@ -47,8 +47,8 @@ const ProjectInfoPage = ({ projectName }) => {
                   >
                   <Image
                     src={path}
-                    width={1918}
-                    height={980}
+                    width={itemData.dim.x}
+                    height={itemData.dim.y}
                     key={index}
                     layout="responsive"
                   />
