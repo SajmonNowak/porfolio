@@ -4,22 +4,29 @@ import React from "react";
 import ProjectInfoPage from "./ProjectInfoPage";
 import { VscChromeClose } from "react-icons/vsc";
 import { Slide } from "@chakra-ui/transition";
-import {darken} from "@chakra-ui/theme-tools"
+import { darken } from "@chakra-ui/theme-tools";
+
 const Modal = ({ projectName, setOpenModal, openModal }) => {
   return (
-    <Slide direction="bottom" in={openModal} reverse={true} unmountOnExit={true} style={{ zIndex: "99999", width:"100vw", height:"100vh" }}>
-        <Box
-          position="fixed"
-          top="0"
-          left="0"
-          bgColor="rgba(0,0,0,0.95)"
-          w="100vw"
-          h="100vh"
-          zIndex="99999"
-          onClick={(e) => {
-            setOpenModal(false);
-          }}
-        >
+    <Slide
+      direction="bottom"
+      in={openModal}
+      reverse={true}
+      unmountOnExit={true}
+      style={{ zIndex: "99999", width: "100vw", height: "100vh" }}
+    >
+      <Box
+        position="fixed"
+        top="0"
+        left="0"
+        bgColor="rgba(0,0,0,0.95)"
+        w="100vw"
+        h="100vh"
+        zIndex="99999"
+        onClick={(e) => {
+          setOpenModal(false);
+        }}
+      >
         <Box
           className="scrollBar"
           bgColor="black"
@@ -34,7 +41,7 @@ const Modal = ({ projectName, setOpenModal, openModal }) => {
           overflowY="overlay"
           onClick={(e) => e.stopPropagation()}
         >
-          <Flex direction="column" position="relative"  pb="20px">
+          <Flex direction="column" position="relative" pb="20px">
             <Icon
               onClick={() => setOpenModal(false)}
               as={VscChromeClose}
@@ -43,13 +50,13 @@ const Modal = ({ projectName, setOpenModal, openModal }) => {
               right="20px"
               w={["20px", "30px", "30px", "40px"]}
               h={["20px", "30px", "30px", "40px"]}
-              _hover={{color: darken("mainRed", 20)}}
+              _hover={{ color: darken("mainRed", 20) }}
             />
             <ProjectInfoPage projectName={projectName} />
           </Flex>
         </Box>
-    </Box>
-      </Slide>
+      </Box>
+    </Slide>
   );
 };
 

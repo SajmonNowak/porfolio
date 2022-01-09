@@ -17,7 +17,7 @@ const MenuItem = ({ name, path, stressed, setOpenMenu }) => {
         }}
         tabIndex="1"
         _hover={{ color: darken("mainRed", 10) }}
-        onClick={() => setOpenMenu(false)}
+        onClick={() => setOpenMenu ? setOpenMenu(false) : "undefined"}
       >
         <Text color={stressed ? theme.colors.mainRed : ""}>{name}</Text>
       </Link>

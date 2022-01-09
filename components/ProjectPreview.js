@@ -21,7 +21,7 @@ const ProjectPreview = ({ item }) => {
       }}
       _hover={{
         color: darken("mainRed", 10),
-        boxShadow: "0px 0 8px grey",
+        boxShadow: "0 2px 15px #383735",
       }}
       tabIndex="1"
     >
