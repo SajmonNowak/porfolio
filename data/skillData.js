@@ -12,6 +12,8 @@ import {
   SiGatsby,
   SiChakraui,
   SiWebpack,
+  SiHeroku,
+  SiHandlebarsdotjs
 } from "react-icons/si";
 
 const skillData = [
@@ -90,6 +92,16 @@ const skillData = [
     level: "Medium",
     icon: SiWebpack,
   },
+  {
+    name: "Heroku",
+    level: "Medium",
+    icon: SiHeroku,
+  },
+  {
+    name: "Handlebars",
+    level: "Medium",
+    icon: SiHandlebarsdotjs
+  }
 ];
 
 export default skillData;

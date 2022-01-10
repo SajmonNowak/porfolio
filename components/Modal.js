@@ -8,32 +8,32 @@ import { darken } from "@chakra-ui/theme-tools";
 
 const Modal = ({ projectName, setOpenModal, openModal }) => {
   return (
+    <Box
+      position="fixed"
+      top="0"
+      left="0"
+      bgColor="rgba(0,0,0,0.95)"
+      w="100vw"
+      h="100vh"
+      zIndex="99999"
+      onClick={(e) => {
+        setOpenModal(false);
+      }}
+    >
     <Slide
-      direction="bottom"
+    direction="bottom"
       in={openModal}
       reverse={true}
       unmountOnExit={true}
       style={{ zIndex: "99999", width: "100vw", height: "100vh" }}
     >
-      <Box
-        position="fixed"
-        top="0"
-        left="0"
-        bgColor="rgba(0,0,0,0.95)"
-        w="100vw"
-        h="100vh"
-        zIndex="99999"
-        onClick={(e) => {
-          setOpenModal(false);
-        }}
-      >
         <Box
           className="scrollBar"
           bgColor="black"
           margin="0 auto"
           mt="10vh"
           maxW="1200px"
-          w="90%"
+          w={["99%", "95%", "90%"]}
           height="90vh"
           border="1px solid rgba(255, 255, 255, 0.24)"
           borderRadius="10px 10px 0px 0px"
@@ -55,8 +55,8 @@ const Modal = ({ projectName, setOpenModal, openModal }) => {
             <ProjectInfoPage projectName={projectName} />
           </Flex>
         </Box>
-      </Box>
     </Slide>
+      </Box>
   );
 };
 

@@ -8,7 +8,6 @@ const projectData = [
       "Express",
       "NodeJS",
       "MongoDB",
-      "Mangoose",
       "React",
       "Styled Components",
       "Heroku",
@@ -32,8 +31,8 @@ const projectData = [
     ],
     dim: {
       x: 1918,
-      y: 980
-    }
+      y: 980,
+    },
   },
   {
     name: "Battleships",
@@ -50,7 +49,6 @@ const projectData = [
     ],
     mainPage: true,
     colspan: 2,
-    desc: "Sed libero quam, ullamcorper non felis ac, suscipit egestas ex. Proin porttitor lacinia nisi sed efficitur. Etiam ac felis id diam volutpat volutpat ut quis urna. Proin convallis purus eget leo pharetra, vitae aliquet metus molestie. Aenean tellus lacus, ultricies sit amet scelerisque in, vestibulum nec purus. In semper mauris quis orci iaculis feugiat. Vivamus purus purus, vulputate et tortor a, pellentesque mattis magna. Proin et nisl sed erat cursus semper ac in tellus. Proin egestas lacus orci, ut congue lorem porttitor a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In efficitur massa in enim accumsan, porta ornare turpis imperdiet. Morbi gravida, lorem nec commodo consequat, purus ex dignissim odio, in imperdiet neque tortor vitae nibh. Proin scelerisque volutpat diam at venenatis. Nam nec massa eu lorem viverra tincidunt.",
     imgs: [
       "/images/battleships/battleships.png",
       "/images/battleships/battleships2.png",
@@ -59,25 +57,25 @@ const projectData = [
     ],
     dim: {
       x: 1215,
-      y: 873
-    }
+      y: 873,
+    },
   },
   {
     name: "CV-Builder",
     videoURL: "/videos/cv.webm",
-    gitHub:"https://github.com/SajmonNowak/CV/tree/master",
-    live:"https://sajmonnowak.github.io/CV/",
+    gitHub: "https://github.com/SajmonNowak/CV/tree/master",
+    live: "https://sajmonnowak.github.io/CV/",
     tags: ["React", "CSS"],
     desc: "My goal was to create my first React application that creates good looking CVs. At least better looking that my ordinary Word CVs. It was important for me to let the user decide how much experience and skills he wants to add to his CV. Thus, users can decide to delete or add new component instances. After adding all important information, the CV can be easily saved or printed.",
     bullets: ["Components", "Conditional Rendering", "Hooks, States and Props"],
     mainPage: true,
     colspan: 2,
     rowspan: 2,
-    imgs: [
-      "",
-      "",
-
-    ]
+    imgs: ["/images/CV/CV.png", "/images/CV/CV2.png", "/images/CV/CV3.png"],
+    dim: {
+      x: 864,
+      y: 964,
+    },
   },
   {
     name: "Travel Website",
@@ -90,26 +88,76 @@ const projectData = [
   {
     name: "Tic-Tac-Toe",
     videoURL: "/videos/tictactoe.webm",
-    tags: ["JavaScript", "CSS"],
-    desc: "",
+    tags: ["JavaScript", "CSS", "HTML"],
+    gitHub: "https://github.com/SajmonNowak/Tic-Tac-Toe",
+    live: "https://sajmonnowak.github.io/Tic-Tac-Toe/",
+    desc: "It is one of my very first and favorite projects. You can play with your friends or against an AI. I gave the game a pixelated retro design to remind the player of his childhood.  You can choose between two AI difficulties 'easy' (random field selections) and 'hard' (minimax algorhithm to choose the best field based on what the player would choose). Implementing the algorithm was challanging as a beginer but it was very fullfilling to observe my friends who could never beat it. This project also was my first attempt to follow OOP and to organize everything in objects.",
+    bullets: [
+      "Object-Oriented Programming",
+      "Minimax algorithm",
+      '"AI" / Controller',
+      "Factory Functions",
+    ],
     mainPage: true,
     colspan: 1,
+    imgs: [
+      "/images/tictactoe/tictactoe.png",
+      "/images/tictactoe/tictactoe2.png",
+      "/images/tictactoe/tictactoe3.png",
+      "/images/tictactoe/tictactoe4.png",
+    ],
+    dim: {
+      x: 1189,
+      y: 800,
+    },
   },
   {
     name: "Message Board",
     videoURL: "/videos/board.webm",
-    tags: ["Express", "NodeJS"],
-    desc: "",
+    tags: ["Express", "NodeJS", "Handlebars", "CSS", "Heroku"],
+    gitHub: "https://github.com/SajmonNowak/messageApp",
+    live: "https://mighty-refuge-15538.herokuapp.com/",
+    desc: "My first back-end project. It is just a simple messaging app. Write something in a form and it will be displayed on the main page board. I used this project to learn how Express routing works and how to use templating engines to create Views.",
+    bullets: ["Routing", "Views", "Deployment with Heroku"],
     mainPage: true,
     colspan: 1,
+    imgs: [
+      "/images/message/message.png",
+      "/images/message/message2.png",
+      "/images/message/message3.png",
+    ],
+    dim: {
+      x: 1750,
+      y: 969,
+    },
   },
   {
     name: "Online Shop",
     videoURL: "/videos/shop.webm",
+    gitHub: "https://github.com/SajmonNowak/shopping-cart",
+    live: "https://sajmonnowak.github.io/shopping-cart",
     tags: ["React", "Styled Components"],
-    desc: "",
+    desc: "This project was created to primarily learn how routing works with React. I tried to make the shop feel modern and looking similar to other known online shops. It was also an opportunity deepen my React state understanding based on the functionality of online shop carts and filters. Styling was done with styled-components. It was a great opportunity to learn more about conditonal styling and style components based on passed properties",
+    bullets: [
+      "React Router",
+      "Links",
+      "React states",
+      "Online shop cart and filter functionality",
+      "Conditional styling"
+    ],
     mainPage: false,
     colspan: 4,
+    imgs: [
+      "/images/shop/shop.png",
+      "/images/shop/shop2.png",
+      "/images/shop/shop3.png",
+      "/images/shop/shop4.png",
+      "/images/shop/shop5.png",
+    ],
+    dim: {
+      x: 1587,
+      y: 954,
+    },
   },
   {
     name: "Etch-A-Sketch",

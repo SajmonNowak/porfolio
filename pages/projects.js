@@ -34,7 +34,7 @@ const projects = () => {
         <ProjectList openProjectModal={openProjectModal} />
       </Flex>
       {openModal && (
-        <Modal projectName={projectNameSelected} setOpenModal={setOpenModal} />
+        <Modal projectName={projectNameSelected} setOpenModal={setOpenModal} openModal={openModal} />
       )}
       <Center py="50px">
         <Link href="/">
