@@ -21,6 +21,7 @@ const Logo = ({ site, ml, mx }) => {
           outline: "none",
         }}
         tabIndex="1"
+        isExternal
       >
         <Icon
           as={data[site].icon}

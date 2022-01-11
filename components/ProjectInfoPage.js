@@ -1,14 +1,16 @@
 import React from "react";
 import { Button } from "@chakra-ui/button";
-import { Box, Flex, Heading, HStack, Text, VStack } from "@chakra-ui/layout";
-import { Tag } from "@chakra-ui/tag";
+import { Box, Flex, HStack, List, ListItem, Text } from "@chakra-ui/layout";
 import projectData from "../data/projectData";
 import Image from "next/image";
 import Title from "./Title";
-import { BsLinkedin, BsGithub } from "react-icons/bs";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { BsGithub } from "react-icons/bs";
+import {  SwiperSlide } from "swiper/react";
 import Slider from "./Slider";
 import SkillTag from "./SkillTag";
+import {BiRadioCircle} from "react-icons/bi"
+import { ListIcon } from "@chakra-ui/layout";
+import { Link } from "@chakra-ui/layout";
 
 const ProjectInfoPage = ({ projectName }) => {
   const itemData = projectData.find((elem) => elem.name === projectName);
@@ -23,14 +25,14 @@ const ProjectInfoPage = ({ projectName }) => {
 
   return (
     <Box >
-      <Box p="20px">
+      <Box p={4}>
         <Title text={itemData.name} white/>
-        <Box mt="20px">
+        <Box mt={4}>
         <Text opacity="0.6" >Tech</Text>
-        <Flex mt="10px" flexWrap="wrap" gridGap="5px">{generateTags()}</Flex>
+        <Flex mt={2} flexWrap="wrap" gridGap="5px">{generateTags()}</Flex>
         </Box>
       </Box>
-      <Flex width="100%"  >
+      <Flex width="100%" mt={2}>
         <Slider slides={ itemData.dim.x > 1400 ? 1.2 : 2.2} freeMode>
           {itemData.imgs.map((path, index) => {
             return (
@@ -60,15 +62,26 @@ const ProjectInfoPage = ({ projectName }) => {
           })}
         </Slider>
       </Flex>
-      <Box p="20px" mt="20px">
+      <Box p="20px" mt={8}>
         <Text fontSize={["md", "lg", "xl"]} w="80%">
           {itemData.desc}
         </Text>
-        <HStack mt="40px" spacing={5}>
+        <Text mt={8} opacity="0.6" >Functionality / Skills</Text>
+          <List mt={2}> 
+          {itemData.bullets.map((bullet, index) =>  <ListItem pt={ index === 0 ? 0 : 2}>
+            <ListIcon as={BiRadioCircle}/>
+            {bullet}
+            </ListItem>)}
+          </List>
+        <HStack mt={16} spacing={5}>
+          <Link href={itemData.live} isExternal _hover={{textDecoration:"none"}} >
           <Button variant="primary">Live Preview</Button>
+          </Link>
+          <Link href={itemData.gitHub} isExternal _hover={{textDecoration:"none"}}>
           <Button leftIcon={<BsGithub />} variant="secondary">
             GitHub
           </Button>
+          </Link>
         </HStack>
       </Box>
     </Box>
