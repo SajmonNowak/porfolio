@@ -36,11 +36,13 @@ export default function Home() {
           <Skills />
           <ProjectSummary openProjectModal={openProjectModal} />
           <Contact />
+          {openModal && 
           <Modal
             projectName={projectNameSelected}
             setOpenModal={setOpenModal}
             openModal={openModal}
           />
+          }
         </main>
       </Layout>
     </>

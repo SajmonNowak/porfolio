@@ -2,9 +2,11 @@ import { GridItem } from "@chakra-ui/layout";
 import { Grid } from "@chakra-ui/layout";
 import React from "react";
 import projectData from "../data/projectData";
+import projectOrder from "../data/projectOrder";
 import ProjectPreview from "./ProjectPreview";
 
 const ProjectList = ({ openProjectModal, home }) => {
+
   return (
     <Grid
       templateColumns={["1fr", "1fr", "repeat(4, 1fr)"]}
@@ -13,33 +15,37 @@ const ProjectList = ({ openProjectModal, home }) => {
       w="100%"
     >
       {home
-        ? projectData.map((item, index) => {
-            if (item.mainPage) {
-              return (
-                <GridItem
-                  colSpan={[1, 1, item.colspan]}
-                  rowSpan={[ 1, 1, item.rowspan ? item.rowspan : 1]}
-                  minHeight="10vw"
-                  key={index}
-                  onClick={() => openProjectModal(item.name)}
-                >
-                  <ProjectPreview item={item} />
-                </GridItem>
-              );
-            }
-          })
-        : projectData.map((item, index) => (
-            <GridItem
-              colSpan={[1, 1, item.colspan]}
-              rowSpan={[ 1, 1, item.rowspan ? item.rowspan : 1]}
-              minHeight="10vw"
-              bgColor="red"
-              key={index}
-              onClick={() => openProjectModal(item.name)}
-            >
-              <ProjectPreview item={item} />
-            </GridItem>
-          ))}
+        ? 
+        projectOrder.home.map((elementName, index) => {
+          let item;
+          const projectObject = projectData.find((project) => project.name === elementName);
+          item = (<GridItem
+            colSpan={[1, 1, projectObject.colspan.home]}
+            rowSpan={[1, 1, projectObject.rowspan ? projectObject.rowspan : 1]}
+            minHeight="10vw"
+            key={index}
+            onClick={() => openProjectModal(projectObject.name)}
+          >
+            <ProjectPreview item={projectObject} />
+          </GridItem>)
+
+          return item;
+        })
+        : projectOrder.projectPage.map((elementName, index) => {
+          let item;
+          const projectObject = projectData.find((project) => project.name === elementName);
+          item = (<GridItem
+            colSpan={[1, 1, projectObject.colspan.project]}
+            rowSpan={[1, 1, projectObject.rowspan ? projectObject.rowspan : 1]}
+            minHeight="10vw"
+            key={index}
+            onClick={() => openProjectModal(projectObject.name)}
+          >
+            <ProjectPreview item={projectObject} />
+          </GridItem>)
+
+          return item;
+        })}
     </Grid>
   );
 };
