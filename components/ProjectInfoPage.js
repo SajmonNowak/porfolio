@@ -26,7 +26,7 @@ const ProjectInfoPage = ({ projectName }) => {
   return (
     <Box >
       <Box p={4}>
-        <Title text={itemData.name} white/>
+        <Title text={itemData.name} />
         <Box mt={4}>
         <Text opacity="0.6" >Tech</Text>
         <Flex mt={2} flexWrap="wrap" gridGap="5px">{generateTags()}</Flex>
@@ -69,7 +69,7 @@ const ProjectInfoPage = ({ projectName }) => {
         <Text mt={8} opacity="0.6" >Functionality / Skills</Text>
           <List mt={2}> 
           {itemData.bullets.map((bullet, index) =>  <ListItem pt={ index === 0 ? 0 : 2}>
-            <ListIcon as={BiRadioCircle}/>
+            <ListIcon as={BiRadioCircle} color="mainRed"/>
             {bullet}
             </ListItem>)}
           </List>
