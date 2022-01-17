@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/layout";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import About from "../components/About";
@@ -31,11 +32,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <main>
+        <main >
           <Header />
+          <Box>
           <Skills />
+          </Box>
+          <Box mt={[36, 36, 60]}>
           <ProjectSummary openProjectModal={openProjectModal} />
+          </Box>
+          <Box>
           <Contact />
+          </Box>
           {openModal && 
           <Modal
             projectName={projectNameSelected}

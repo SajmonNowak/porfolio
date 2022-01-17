@@ -36,9 +36,9 @@ const projects = () => {
       {openModal && (
         <Modal projectName={projectNameSelected} setOpenModal={setOpenModal} openModal={openModal} />
       )}
-      <Center py="50px">
+      <Center pb="50px">
         <Link href="/">
-          <Button leftIcon={<Icon mr="5px" as={BiArrowBack}/>} variant="primary">Home</Button>
+          <Button mt={[12, 16]} leftIcon={<Icon mr="5px" as={BiArrowBack}/>} variant="primary">Home</Button>
         </Link>
       </Center>
     </Layout>

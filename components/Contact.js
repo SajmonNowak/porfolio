@@ -6,7 +6,6 @@ import Logo from "./Logo";
 const Contact = () => {
   return (
     <Flex
-      pl="2vw"
       mt={20}
       py={[36]}
       direction="column"

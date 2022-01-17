@@ -13,6 +13,10 @@ const theme = extendTheme({
     Button: {
       baseStyle: {},
       sizes: {
+        sm: {
+          h: 12,
+          minW: "120px"
+        },
         md: {
           h: 14,
           minW: "160px",
@@ -22,6 +26,8 @@ const theme = extendTheme({
         primary: {
           bgColor: "mainRed",
           border: "1px solid #AB0F62",
+          height: [10, 12, 14],
+          minW: ["120px","120px", "160px"],
           _hover: {
             bgColor: darken("mainRed", 10),
           },
@@ -33,6 +39,8 @@ const theme = extendTheme({
         secondary: {
           color: "white",
           bgColor: "transparent",
+          height: [10, 12, 14],
+          minW: ["120px","120px", "160px"],
           border: "1px solid white",
           _hover: {
             color: darken("mainRed", 10),

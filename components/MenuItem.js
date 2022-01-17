@@ -1,13 +1,14 @@
-import { Box, Link, Text } from "@chakra-ui/layout";
+import { Box, Link as ChakraLink, Text } from "@chakra-ui/layout";
 import React from "react";
 import theme from "../styles/theme";
 import { darken } from "@chakra-ui/theme-tools";
+import NextLink from "next/link"
 
 const MenuItem = ({ name, path, stressed, setOpenMenu }) => {
   return (
     <Box padding="4">
-      <Link
-        href={path}
+      <NextLink href={path} passHref>
+        <ChakraLink
         _focus={{
           color: darken("mainRed", 10),
           border: "6px solid #AB0F62",
@@ -20,7 +21,9 @@ const MenuItem = ({ name, path, stressed, setOpenMenu }) => {
         onClick={() => setOpenMenu ? setOpenMenu(false) : "undefined"}
       >
         <Text color={stressed ? theme.colors.mainRed : ""}>{name}</Text>
-      </Link>
+      </ChakraLink>
+
+      </NextLink>
     </Box>
   );
 };

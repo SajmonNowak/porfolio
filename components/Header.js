@@ -36,7 +36,7 @@ const Header = () => {
       w="100%"
       h="100vh"
       paddingTop="25vh"
-      paddingLeft={["5%", "5%", "10%", "10%", "10%"]}
+      
     >
       <Flex direction="column">
         <Box>
