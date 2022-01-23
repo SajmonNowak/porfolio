@@ -1,5 +1,4 @@
 .scrollBar {
-
   &::-webkit-scrollbar {
     width: 16px;
   }
@@ -19,4 +18,9 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+::selection {
+  background: #ab0f62;
+  color: white;
 }
