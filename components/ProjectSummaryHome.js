@@ -1,12 +1,9 @@
-import { Flex, Grid, GridItem, Box, Center, Heading } from "@chakra-ui/layout";
+import { Flex, Box, Center, Heading } from "@chakra-ui/layout";
 import React from "react";
 import Link from "next/link";
 import Title from "./Title";
-import projectData from "../data/projectData";
 import { Button } from "@chakra-ui/button";
 import theme from "../styles/theme";
-import Slider from "./Slider";
-import { SwiperSlide } from "swiper/react";
 import ProjectList from "./ProjectList";
 
 const ProjectSummary = ({ openProjectModal }) => {
@@ -16,7 +13,7 @@ const ProjectSummary = ({ openProjectModal }) => {
       <Box mt="50px">
         <ProjectList home={true} openProjectModal={openProjectModal} />
         <Center>
-          <Link href="/projects">
+          <Link href="/projects" passHref>
             <Button
               variant="primary"
               bgColor={theme.colors.mainRed}

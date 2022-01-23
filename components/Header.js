@@ -32,12 +32,7 @@ const Header = () => {
   };
 
   return (
-    <Box
-      w="100%"
-      h="100vh"
-      paddingTop="25vh"
-      
-    >
+    <Box w="100%" h="100vh" paddingTop="25vh" id="about">
       <Flex direction="column">
         <Box>
           <Heading as="h1" fontSize={["4xl", "5xl", "5xl", "5xl", "6xl"]}>

@@ -1,5 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
-import { darken } from "@chakra-ui/theme-tools";
+import { lighten } from "@chakra-ui/theme-tools";
 
 const theme = extendTheme({
   fonts: {
@@ -29,7 +29,7 @@ const theme = extendTheme({
           height: [10, 12, 14],
           minW: ["120px","120px", "160px"],
           _hover: {
-            bgColor: darken("mainRed", 10),
+            bgColor: lighten("mainRed", 10),
           },
           _focus: {
             outline: "none",
@@ -43,8 +43,8 @@ const theme = extendTheme({
           minW: ["120px","120px", "160px"],
           border: "1px solid white",
           _hover: {
-            color: darken("mainRed", 10),
-            borderColor: darken("mainRed", 10),
+            color: lighten("mainRed", 10),
+            borderColor: lighten("mainRed", 10),
           },
           _focus: {
             outline: "none",

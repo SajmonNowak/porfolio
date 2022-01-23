@@ -1,9 +1,8 @@
-import Icon from "@chakra-ui/icon";
+
 import { Box, Flex, VStack, Stack } from "@chakra-ui/layout";
 import React, { useEffect, useState } from "react";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import MenuItem from "./MenuItem";
-import { AiOutlineMenu } from "react-icons/ai";
 import { Slide } from "@chakra-ui/transition";
 import { Squash as Hamburger } from "hamburger-react";
 

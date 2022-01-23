@@ -5,9 +5,10 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 import Header from "../components/Header";
 import Layout from "../components/Layout";
-import Modal from "../components/Modal";
 import ProjectSummary from "../components/ProjectSummaryHome";
 import Skills from "../components/Skills";
+import dynamic from "next/dynamic";
+const Modal = dynamic(() => import("../components/Modal"), { srr: false });
 
 export default function Home() {
   const [projectNameSelected, setProjectNameSelected] = useState(undefined);
@@ -32,24 +33,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <main >
+        <main>
           <Header />
           <Box>
-          <Skills />
+            <Skills />
           </Box>
           <Box mt={[36, 36, 60]}>
-          <ProjectSummary openProjectModal={openProjectModal} />
+            <ProjectSummary openProjectModal={openProjectModal} />
           </Box>
           <Box>
-          <Contact />
+            <Contact />
           </Box>
-          {openModal && 
-          <Modal
-            projectName={projectNameSelected}
-            setOpenModal={setOpenModal}
-            openModal={openModal}
-          />
-          }
+          {openModal && (
+            <Modal
+              projectName={projectNameSelected}
+              setOpenModal={setOpenModal}
+              openModal={openModal}
+            />
+          )}
         </main>
       </Layout>
     </>

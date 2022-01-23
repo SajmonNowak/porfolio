@@ -9,7 +9,6 @@ const MobileProjectPreview = ({ item }) => {
       h="100%"
       objectFit="cover"
       position="relative"
-      objectFit="cover"
     >
       <Box
         position="absolute"
@@ -24,7 +23,7 @@ const MobileProjectPreview = ({ item }) => {
         </Center>
       </Box>
 
-      <Image src={item.imgs[0]} layout="fill" objectFit="cover" />
+      <Image src={item.imgs[0]} layout="fill" objectFit="cover" alt={item.name}/>
     </Box>
   );
 };

@@ -4,13 +4,12 @@ import { Tag } from "@chakra-ui/tag";
 import React, { useState } from "react";
 import SkillLogo from "./SkillLogo";
 
-const SkillTag = ({ index, tag }) => {
+const SkillTag = ({ tag }) => {
   const [showIcon, setShowIcon] = useState(false);
 
   return (
     <Tag
       position="relative"
-      key={"index-" + index}
       onMouseEnter={() => setShowIcon(true)}
       onMouseLeave={() => setShowIcon(false)}
     >

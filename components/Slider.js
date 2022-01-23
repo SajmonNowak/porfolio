@@ -1,5 +1,5 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
 import SwiperCore, { FreeMode, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";

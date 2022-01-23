@@ -15,7 +15,7 @@ const Skills = () => {
         <Text mt="50px">
           <span style={{ color: "#a34b79" }}>let</span>{" "}
           <span style={{ color: "#AB0F62" }}>experience</span>; <br />
-          <span style={{ color: "#AB0F62" }}>experience</span> = 'profound';
+          <span style={{ color: "#AB0F62" }}>experience</span> = 'profound' ;
         </Text>
         <SkillList level="Pro" />
         <Text mt="50px">

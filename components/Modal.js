@@ -20,13 +20,13 @@ const Modal = ({ projectName, setOpenModal, openModal }) => {
         setOpenModal(false);
       }}
     >
-    <Slide
-    direction="bottom"
-      in={openModal}
-      reverse={true}
-      unmountOnExit={true}
-      style={{ zIndex: "99999", width: "100vw", height: "100vh" }}
-    >
+      <Slide
+        direction="bottom"
+        in={openModal}
+        reverse={true}
+        unmountOnExit={true}
+        style={{ zIndex: "99999", width: "100vw", height: "100vh" }}
+      >
         <Box
           className="scrollBar"
           bgColor="black"
@@ -55,8 +55,8 @@ const Modal = ({ projectName, setOpenModal, openModal }) => {
             <ProjectInfoPage projectName={projectName} />
           </Flex>
         </Box>
-    </Slide>
-      </Box>
+      </Slide>
+    </Box>
   );
 };
 
