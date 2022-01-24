@@ -15,7 +15,7 @@ const Modal = ({ projectName, setOpenModal, openModal }) => {
       bgColor="rgba(0,0,0,0.95)"
       w="100vw"
       h="100vh"
-      zIndex="99999"
+      zIndex="99999999"
       onClick={(e) => {
         setOpenModal(false);
       }}
@@ -25,7 +25,7 @@ const Modal = ({ projectName, setOpenModal, openModal }) => {
         in={openModal}
         reverse={true}
         unmountOnExit={true}
-        style={{ zIndex: "99999", width: "100vw", height: "100vh" }}
+        style={{ zIndex: "99999999", width: "100vw", height: "100vh" }}
       >
         <Box
           className="scrollBar"

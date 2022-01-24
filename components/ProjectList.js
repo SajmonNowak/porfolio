@@ -35,6 +35,7 @@ const ProjectList = ({ openProjectModal, home }) => {
                   minHeight="10vw"
                   key={index}
                   onClick={() => openProjectModal(projectObject.name)}
+                  overflow="hidden"
                 >
                   <ProjectPreview item={projectObject} />
                 </GridItem>
@@ -58,6 +59,7 @@ const ProjectList = ({ openProjectModal, home }) => {
                   minHeight="10vw"
                   key={index}
                   onClick={() => openProjectModal(projectObject.name)}
+                  overflow="hidden"
                 >
                   <ProjectPreview item={projectObject} />
                 </GridItem>

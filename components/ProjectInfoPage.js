@@ -27,10 +27,10 @@ const ProjectInfoPage = ({ projectName }) => {
   return (
     <Box>
       <Box p={4}>
-        <Title text={itemData.name.split(' ').join('')} noMargin />
+        <Title text={itemData.name.split(" ").join("")} noMargin />
         <Box mt={4}>
           <Text opacity="0.6">Tech</Text>
-          <Flex mt={2} flexWrap="wrap" gridGap="5px">
+          <Flex mt={2} flexWrap="wrap" style={{ gap: "5px" }}>
             {generateTags()}
           </Flex>
         </Box>

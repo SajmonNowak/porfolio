@@ -24,6 +24,7 @@ const ProjectPreview = ({ item }) => {
         boxShadow: "0 2px 15px #383735",
       }}
       tabIndex="1"
+      overflow="hidden"
     >
       {!activated && (
         <Box
