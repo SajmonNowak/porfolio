@@ -13,7 +13,9 @@ import {
   SiChakraui,
   SiWebpack,
   SiHeroku,
-  SiHandlebarsdotjs
+  SiHandlebarsdotjs,
+  SiWordpress,
+  SiRedux
 } from "react-icons/si";
 
 const skillData = [
@@ -101,6 +103,16 @@ const skillData = [
     name: "Handlebars",
     level: "Medium",
     icon: SiHandlebarsdotjs
+  },
+  {
+    name: "WordPress",
+    level: "Medium",
+    icon: SiWordpress
+  },
+  {
+    name: "Redux",
+    level: "Medium",
+    icon: SiRedux
   }
 ];
 

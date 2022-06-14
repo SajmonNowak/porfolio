@@ -7,8 +7,6 @@ export default function ObjectModel() {
   
 
   return (
-    <Suspense fallback={null} >
       <primitive object={scene}/>
-    </Suspense>
   )
 }
