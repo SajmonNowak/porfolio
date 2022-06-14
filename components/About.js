@@ -5,8 +5,10 @@ import { Canvas, useFram } from "@react-three/fiber";
 import Model from "./ObjectModel";
 import {
   Environment,
+  Loader,
   OrbitControls,
   PerspectiveCamera,
+  Preload,
   SpotLight,
 } from "@react-three/drei";
 import { Camera } from "three";
@@ -45,6 +47,7 @@ const About = () => {
           </GridItem>
           <GridItem minHeight="400">
             <Canvas>
+              <Preload />
               <Suspense fallback={null}>
                 <Model />
                 <PerspectiveCamera
@@ -58,6 +61,7 @@ const About = () => {
                 <Environment preset="sunset" />
               </Suspense>
             </Canvas>
+            <Loader />
           </GridItem>
         </Grid>
       </Flex>
