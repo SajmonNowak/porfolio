@@ -1,4 +1,5 @@
 import { useLoader } from '@react-three/fiber';
+import { Suspense } from 'react';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 export default function ObjectModel() {
@@ -6,6 +7,8 @@ export default function ObjectModel() {
   
 
   return (
+    <Suspense fallback={null} >
       <primitive object={scene}/>
+    </Suspense>
   )
 }
