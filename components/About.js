@@ -43,7 +43,7 @@ const About = () => {
             </Text>
             &lt;/p&gt;
           </GridItem>
-          <GridItem>
+          <GridItem minHeight="400">
             <Canvas>
               <Suspense fallback={null}>
                 <Model />
