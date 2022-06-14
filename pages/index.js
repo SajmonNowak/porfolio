@@ -36,6 +36,9 @@ export default function Home() {
         <main>
           <Header />
           <Box>
+            <About />
+          </Box>
+          <Box>
             <Skills />
           </Box>
           <Box mt={[36, 36, 60]}>

@@ -1,30 +1,65 @@
-import { Box, Container, Flex, Text } from "@chakra-ui/layout";
-import React from "react";
+import { Box, Container, Flex, Text, Grid, GridItem } from "@chakra-ui/layout";
+import React, { Suspense } from "react";
 import Title from "./Title";
+import { Canvas, useFram } from "@react-three/fiber";
+import Model from "./ObjectModel";
+import {
+  Environment,
+  OrbitControls,
+  PerspectiveCamera,
+  SpotLight,
+} from "@react-three/drei";
+import { Camera } from "three";
 
 const About = () => {
   return (
     <Container maxW="100%" py="100px" minH="90vh">
       <Flex d="column">
         <Title text="AboutMe" />
-        <Box w="55%" mt="50px" pl="10vw" fontSize="lg">
-          &lt;p&gt;
-          <Text my="20px">
-            I am a 24 year old student from Bochum, Germany. I propably wrote my
-            first HTML and CSS while finishing my undergraduate degree in
-            Economics. However, my interest for web development ignited in late
-            2021, when working on my first font-end projects. Since late 2021, I
-            focus mostly on learning how to create Full Stack applications. Ever
-            since, i enjoy learning everything that helps me on my Journey to
-            someday create valuably product from the JavaScirpt Basics and clean
-            code to utility-first css.
-            <br />
-            <br />
-            In summary, if you are interested to discuss how to center a div or
-            what Keynesian economics are all about, hit me up.
-          </Text>
-          &lt;/p&gt;
-        </Box>
+        <Grid
+          mt="50px"
+          templateColumns={["1fr", "1fr", "1fr", "1fr 1fr"]}
+          templateRows={["auto auto", "auto auto", "auto auto", "1fr"]}
+          gap="70px"
+        >
+          <GridItem fontSize="lg">
+            &lt;p&gt;
+            <Text my="20px">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit amet.
+              <br />
+              <br />
+              At vero eos et accusam et justo duo dolores et ea rebum. Stet
+              clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit amet.
+            </Text>
+            &lt;/p&gt;
+          </GridItem>
+          <GridItem>
+            <Canvas>
+              <Suspense fallback={null}>
+                <Model />
+                <PerspectiveCamera
+                  makeDefault
+                  fov={75}
+                  position={[0, 7, 10]}
+                  near={1}
+                  far={100}
+                />
+                <OrbitControls autoRotate />
+                <Environment preset="sunset" />
+              </Suspense>
+            </Canvas>
+          </GridItem>
+        </Grid>
       </Flex>
     </Container>
   );
