@@ -8,31 +8,49 @@ const Skills = () => {
     <Flex direction="column" id="skills" pt="50px">
       <Title text="SkillsAndTools" />
       <Box fontSize={["md", "lg", "xl"]}>
-        <Text mt="50px">
-          Technologies and tools I utilized and learned on my programing journey
-          through different projects. Most of them were part of{" "}
+      <Box  mt="50px" color="#24FAF1" fontWeight="bold">
+            &lt;p&gt;
+            </Box>
+        <Text pl="15px" py="10px" borderLeft="1px solid lightgrey">
+          Technologies and tools I utilized and learned on my programming journey
+          through different projects. Most projects were part of{" "}
           <Link
-            href="theodinproject.com"
+            href="https://www.theodinproject.com/"
             isExternal
             display="inline-block"
             fontSize="inherit"
             color="#a34b79"
           >
-            {" "}
             The Odin Project
           </Link>{" "}
-          curriculum. During my studies, I have developed several web pages with
-          Wordpress (Pagebuilders but also custom themes). Currently I am
-          working on a Bucket List that
+          curriculum.
+          <br />
+          Currently, I am working on two custom WordPress
+          themes for my clients.{" "}
+          <br />
+          <Link
+            href="https://github.com/SajmonNowak/BucketList"
+            isExternal
+            display="inline-block"
+            fontSize="inherit"
+            color="#a34b79"
+          >
+            Here{" "}
+          </Link>{" "}
+          is my current hobby project I am working on. A bucket list application
+          involving redux state management, JWT authentication, and more.
         </Text>
-        <Text mt="50px">
+        <Box  color="#24FAF1" fontWeight="bold">
+            &lt;p&gt;
+            </Box>
+        <Text mt="50px" fontWeight="bold">
           <span style={{ color: "#a34b79" }}>let</span>{" "}
-          <span style={{ color: "#AB9A20" }}>experience</span>; <br />
-          <span style={{ color: "#AB9A20" }}>experience</span> = 'Proficient' ;
+          <span style={{ color: "#24FAF1" }}>experience</span>; <br />
+          <span style={{ color: "#24FAF1" }}>experience</span> = 'Proficient' ;
         </Text>
         <SkillList level="Pro" />
-        <Text mt="50px">
-          <span style={{ color: "#AB9A20" }}>experience</span> = 'Exposure' ;
+        <Text mt="50px" fontWeight="bold">
+          <span style={{ color: "#24FAF1" }}>experience</span> = 'Exposure' ;
         </Text>
         <SkillList level="Medium" />
       </Box>

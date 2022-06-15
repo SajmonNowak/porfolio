@@ -26,30 +26,32 @@ const About = () => {
           gap="70px"
         >
           <GridItem fontSize="lg">
-            <Box  color="#AB9A20">
-            &lt;p&gt;
+            <Box color="#24FAF1" fontWeight="bold">
+              &lt;p&gt;
             </Box>
-            <Text my="20px">
+            <Text my="10x" pl="15px" borderLeft="1px solid lightgrey">
               I am a 24 years old self-taught developer from Bochum, Germany. My
-              first HTML and CSS lines were propably written while finishing my
-              undergraduate degree in Economics. However, my interest in web
-              development ignited after the world entered into a global
-              pandemic, leaving me with more time for learning my first
-              programing language. Since then, I focused on creating different
-              front-end and full-stack projects. Some of them are presented on
-              this site and present my learnings and lessons during my journey.
-              Apart from building things, I am always working on improving my
-              code by studying the fundamentals, catching up with methodologies
-              (BEM, CSS in JS ...), architectural patterns (MVC, OOP ...) or
-              trying out new technologies and frameworks.
+              first HTML and CSS lines were probably written while finishing my
+              undergraduate degree in Economics.
               <br />
-              At the moment I am looking for an opportunity that enables me to
+              <br />
+              Since then, I focused on creating different front-end and
+              full-stack projects. I mostly work with JavaScript, React and
+              NodeJS. The projects included on this site present my learnings
+              and lessons during my journey. Apart from building things, I am
+              always working on improving my code by studying the fundamentals,
+              catching up with methodologies (e.g., BEM, CSS in JS),
+              architectural patterns (e.g., MVC, OOP) or trying out new
+              technologies and frameworks.
+              <br />
+              <br />
+              At the moment, I am looking for an opportunity that enables me to
               take responsibility, learn and find people with whom I can build
-              inspiring products and grow from challanges.
+              inspiring products and grow through challenges.
               <br />
             </Text>
-            <Box  color="#AB9A20">
-            &lt;p&gt;
+            <Box color="#24FAF1" fontWeight="bold">
+              &lt;p&gt;
             </Box>
           </GridItem>
           <GridItem minHeight="400">
