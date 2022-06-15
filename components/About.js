@@ -17,7 +17,7 @@ import { Spinner } from "@chakra-ui/react";
 const About = () => {
   return (
     <Container maxW="100%" py="100px" minH="90vh">
-      <Flex d="column">
+      <Flex d="column" id="about">
         <Title text="AboutMe" />
         <Grid
           mt="50px"

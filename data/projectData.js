@@ -67,7 +67,7 @@ const projectData = [
   },
   {
     name: "CV-Builder",
-    videoURL: "/videos/cv.webm",
+    videoURL: "/videos/cv2.webm",
     gitHub: "https://github.com/SajmonNowak/CV/tree/master",
     live: "https://sajmonnowak.github.io/CV/",
     tags: ["React", "CSS"],
@@ -78,7 +78,7 @@ const projectData = [
       project: 2,
     },
     rowspan: 2,
-    imgs: ["/images/CV/CV.png", "/images/CV/CV2.png", "/images/CV/CV3.png"],
+    imgs: ["/images/CV/CV4.png", "/images/CV/CV5.png", "/images/CV/CV6.png"],
     dim: {
       x: 864,
       y: 964,
