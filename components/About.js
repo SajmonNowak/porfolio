@@ -33,10 +33,10 @@ const About = () => {
               I am a 24 years old{" "}
               <span style={{ color: "#a34b79" }}>
                 {" "}
-                self-taught developer from Bochum, Germany{" "}
+                self-taught developer from Bochum, Germany
               </span>
-              . My first HTML and CSS lines were probably written while
-              finishing my undergraduate degree in Economics.
+              . My first HTML and CSS lines were written while finishing my
+              undergraduate degree in Economics.
               <br />
               <br />
               Since then, I focused on creating different{" "}
@@ -44,11 +44,11 @@ const About = () => {
               <span style={{ color: "#a34b79" }}> full-stack projects</span>. I
               mostly work with{" "}
               <span style={{ color: "#a34b79" }}>JavaScript, React </span>
-              <span style={{ color: "#a34b79" }}>and NodeJS </span>. The
-              projects included on this site present my learnings and lessons
-              during my journey. Apart from building things, I am always working
-              on improving my code by studying the fundamentals, catching up
-              with methodologies (e.g., BEM, CSS in JS), architectural patterns
+              <span style={{ color: "#a34b79" }}>and NodeJS</span>. The projects
+              included on this site present my learnings and lessons during my
+              journey. Apart from building things, I am always working on
+              improving my code by studying the fundamentals, catching up with
+              methodologies (e.g., BEM, CSS in JS), architectural patterns
               (e.g., MVC, OOP) or trying out new technologies and frameworks.
               <br />
               <br />
