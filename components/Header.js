@@ -78,7 +78,7 @@ const Header = () => {
                     .typeString("developing")
                     .pauseFor(500)
                     .deleteChars(10)
-                    .typeString("creating things.")
+                    .typeString("creating awesome things.")
                     .callFunction(() => setFinished(true))
                     .start();
                 }}
