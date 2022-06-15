@@ -30,19 +30,26 @@ const About = () => {
               &lt;p&gt;
             </Box>
             <Text my="10x" pl="15px" borderLeft="1px solid lightgrey">
-              I am a 24 years old self-taught developer from Bochum, Germany. My
-              first HTML and CSS lines were probably written while finishing my
-              undergraduate degree in Economics.
+              I am a 24 years old{" "}
+              <span style={{ color: "#a34b79" }}>
+                {" "}
+                self-taught developer from Bochum, Germany{" "}
+              </span>
+              . My first HTML and CSS lines were probably written while
+              finishing my undergraduate degree in Economics.
               <br />
               <br />
-              Since then, I focused on creating different front-end and
-              full-stack projects. I mostly work with JavaScript, React and
-              NodeJS. The projects included on this site present my learnings
-              and lessons during my journey. Apart from building things, I am
-              always working on improving my code by studying the fundamentals,
-              catching up with methodologies (e.g., BEM, CSS in JS),
-              architectural patterns (e.g., MVC, OOP) or trying out new
-              technologies and frameworks.
+              Since then, I focused on creating different{" "}
+              <span style={{ color: "#a34b79" }}>front-end</span> and
+              <span style={{ color: "#a34b79" }}> full-stack projects</span>. I
+              mostly work with{" "}
+              <span style={{ color: "#a34b79" }}>JavaScript, React </span>
+              <span style={{ color: "#a34b79" }}>and NodeJS </span>. The
+              projects included on this site present my learnings and lessons
+              during my journey. Apart from building things, I am always working
+              on improving my code by studying the fundamentals, catching up
+              with methodologies (e.g., BEM, CSS in JS), architectural patterns
+              (e.g., MVC, OOP) or trying out new technologies and frameworks.
               <br />
               <br />
               At the moment, I am looking for an opportunity that enables me to
