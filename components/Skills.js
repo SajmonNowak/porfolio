@@ -8,7 +8,7 @@ const Skills = () => {
     <Flex direction="column" id="skills" pt="50px">
       <Title text="SkillsAndTools" />
       <Box fontSize={["md", "lg", "xl"]}>
-      <Box  mt="50px" color="#24FAF1" fontWeight="bold">
+      <Box  mt="50px" color="#f2fa61" fontWeight="bold">
             &lt;p&gt;
             </Box>
         <Text pl="15px" py="10px" borderLeft="1px solid lightgrey">
@@ -40,11 +40,11 @@ const Skills = () => {
           is my current hobby project I am working on. A bucket list application
           involving redux state management, JWT authentication, and more.
         </Text>
-        <Box  color="#24FAF1" fontWeight="bold">
+        <Box  color="#f2fa61" fontWeight="bold">
             &lt;p&gt;
             </Box>
         <Text mt="50px" fontWeight="bold">
-          <span style={{ color: "#a34b79" }}>let</span>{" "}
+          <span style={{ color: "#f2fa61" }}>let</span>{" "}
           <span style={{ color: "#24FAF1" }}>experience</span>; <br />
           <span style={{ color: "#24FAF1" }}>experience</span> = 'Proficient' ;
         </Text>

@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Link, Text } from "@chakra-ui/layout";
+import { Box, Flex, Link, Text } from "@chakra-ui/layout";
 import React from "react";
 import theme from "../styles/theme";
 import Logo from "./Logo";
@@ -16,7 +16,7 @@ const Contact = () => {
       id="contact"
     >
       <Text fontSize={["3xl","4xl", "5xl","6xl"]} textAlign="center">
-        Ready to <span style={{ color: theme.colors.mainRed }}>build</span>{" "}
+        Ready to <span style={{ color: "#f2fa61"}}>build</span>{" "}
         something together?
       </Text> 
         <Text mt="50px" mb="75px" fontSize={["2xl","3xl","4xl","6xl"]} color={theme.colors.mainRed} _hover={{ color: lighten(theme.colors.mainRed, 5) }}>

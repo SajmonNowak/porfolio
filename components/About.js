@@ -26,10 +26,10 @@ const About = () => {
           gap="70px"
         >
           <GridItem fontSize="lg">
-            <Box color="#24FAF1" fontWeight="bold">
+            <Box color="#f2fa61" fontWeight="bold">
               &lt;p&gt;
             </Box>
-            <Text my="10x" pl="15px" borderLeft="1px solid lightgrey">
+            <Text  py="10px" pl="15px" borderLeft="1px solid lightgrey">
               I am a 24 years old{" "}
               <span style={{ color: "#a34b79" }}>
                 {" "}
@@ -57,7 +57,7 @@ const About = () => {
               inspiring products and grow through challenges.
               <br />
             </Text>
-            <Box color="#24FAF1" fontWeight="bold">
+            <Box color="#f2fa61" fontWeight="bold">
               &lt;p&gt;
             </Box>
           </GridItem>

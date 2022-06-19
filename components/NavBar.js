@@ -26,7 +26,7 @@ const NavBar = () => {
         color="white"
         fontSize="xl"
       >
-        <Stack spacing="8" align="center" justify="flex-end" direction="row">
+        <Stack spacing="8" align="center" justify="flex-end" direction="row" fontWeight="bold">
           <MenuItem name="about()" path={"/#about"} />
           <MenuItem name="skills()" path={"/#skills"} />
           <MenuItem name="portfolio()" path={"/projects"} />

@@ -16,7 +16,7 @@ const Logo = ({ site, ml, mx }) => {
         w="100%"
         h="100%"
         _focus={{
-          color: lighten("mainRed", 10),
+          color: "#f2fa61",
           boxShadow: "0 4px 2px -2px #AB0F62",
           outline: "none",
         }}
@@ -27,7 +27,7 @@ const Logo = ({ site, ml, mx }) => {
           as={data[site].icon}
           w="100%"
           h="100%"
-          _hover={{ color: lighten(theme.colors.mainRed), transform: "scale(1.1)" }}
+          _hover={{ color: "#f2fa61", transform: "scale(1.1)" }}
           transition=".3s"
         />
       </Link>

@@ -82,7 +82,7 @@ const ProjectInfoPage = ({ projectName }) => {
         <List mt={2}>
           {itemData.bullets.map((bullet, index) => (
             <ListItem pt={index === 0 ? 0 : 2} key={uniqid()}>
-              <ListIcon as={BiRadioCircle} color="mainRed" />
+              <ListIcon as={BiRadioCircle} color="#f2fa61" />
               {bullet}
             </ListItem>
           ))}

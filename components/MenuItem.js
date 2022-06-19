@@ -1,7 +1,6 @@
 import { Box, Link as ChakraLink, Text } from "@chakra-ui/layout";
 import React from "react";
 import theme from "../styles/theme";
-import { lighten } from "@chakra-ui/theme-tools";
 import NextLink from "next/link"
 
 const MenuItem = ({ name, path, stressed, setOpenMenu }) => {
@@ -10,17 +9,17 @@ const MenuItem = ({ name, path, stressed, setOpenMenu }) => {
       <NextLink href={path} passHref>
         <ChakraLink
         _focus={{
-          color: lighten("mainRed", 10),
+          color: "#f2fa61",
           border: "6px solid #AB0F62",
           boxShadow: "0 0 10px #AB0F62",
           borderRadius: "5px",
           outline: "none",
         }}
         tabIndex="1"
-        _hover={{ color: lighten("mainRed", 10) }}
+        _hover={{ color: "#f2fa61" }}
         onClick={() => setOpenMenu ? setOpenMenu(false) : "undefined"}
       >
-        <Text color={stressed ? theme.colors.mainRed : ""}>{name}</Text>
+        <Text color={stressed ? theme.colors.mainRed : ""} transition="transform .2s" _hover={ {transform: stressed ? "scale(1.1)" : ""}}>{name}</Text>
       </ChakraLink>
 
       </NextLink>
