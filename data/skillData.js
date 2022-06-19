@@ -17,7 +17,7 @@ import {
   SiWordpress,
   SiRedux,
   SiFigma,
-  SiWebflow
+  SiGraphql
 } from "react-icons/si";
 
 const skillData = [
@@ -122,9 +122,9 @@ const skillData = [
     icon: SiFigma
   },
   {
-    name: "Webflow",
+    name: "GraphQl",
     level: "Medium",
-    icon: SiWebflow
+    icon: SiGraphql
   }
 ];
 
