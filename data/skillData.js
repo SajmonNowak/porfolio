@@ -6,7 +6,7 @@ import {
   SiStyledcomponents,
   SiExpress,
   SiMongodb,
-  SiGithub,
+  SiGit,
   SiFirebase,
   SiNextdotjs,
   SiGatsby,
@@ -67,9 +67,9 @@ const skillData = [
     icon: SiMongodb,
   },
   {
-    name: "GitHub",
+    name: "Git",
     level: "Pro",
-    icon: SiGithub,
+    icon: SiGit,
   },
   {
     name: "FireBase",
