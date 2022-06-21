@@ -9,7 +9,7 @@ import { BiArrowBack } from "react-icons/bi";
 import Icon from "@chakra-ui/icon";
 import Title from "../components/Title";
 
-const projects = () => {
+const Projects = () => {
   const [projectNameSelected, setProjectNameSelected] = useState(undefined);
   const [openModal, setOpenModal] = useState(false);
 
@@ -54,4 +54,4 @@ const projects = () => {
   );
 };
 
-export default projects;
+export default Projects;

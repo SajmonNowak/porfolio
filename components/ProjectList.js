@@ -6,12 +6,16 @@ import projectOrder from "../data/projectOrder";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import MobileProjectPreview from "./MobileProjectPreview";
 import ProjectPreview from "./ProjectPreview";
+import { isFirefox, isSafari } from 'react-device-detect';
 
 const ProjectList = ({ openProjectModal, home }) => {
   const { width: windowWidth, height: windowHeight } = useWindowDimensions();
 
   if (windowWidth > 800) {
     return (
+      <>
+      {isFirefox && <div style={{color: "red", fontSize: "24px"}}>I see you are using Firefox. Please consider using another Browser like Chrome, Edge, Opera or Brave. Firefox does currently have an issue and does not display my videos although it is in the correct webm format. Probably because of the software i used to record my projects. Thank you :)</div>}
+      {isSafari && <div style={{color: "red", fontSize: "24px"}}>I see you are using Safari. Please consider using another Browser like Chrome, Edge, Opera or Brave. Safari does currently have an issue and does not display my videos although it is in the correct webm format. Probably because of the software i used to record my projects. Thank you :)</div>}
       <Grid
         templateColumns={["1fr", "1fr", "repeat(4, 1fr)"]}
         templateRows="repeat(auto-fit, 1fr)"
@@ -68,6 +72,7 @@ const ProjectList = ({ openProjectModal, home }) => {
               return item;
             })}
       </Grid>
+      </>
     );
   } else {
     return (

@@ -38,7 +38,7 @@ const Modal = ({ projectName, setOpenModal, openModal }) => {
           border="1px solid rgba(255, 255, 255, 0.24)"
           borderRadius="10px 10px 0px 0px"
           bottom="0"
-          overflowY="overlay"
+          overflowY="auto"
           onClick={(e) => e.stopPropagation()}
         >
           <Flex direction="column" position="relative" pb="20px">

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Flex, Text, Box, Center } from "@chakra-ui/layout";
 import { darken } from "@chakra-ui/theme-tools";
 
+
 const ProjectPreview = ({ item }) => {
   const [activated, setActivated] = useState(false);
 
@@ -39,9 +40,8 @@ const ProjectPreview = ({ item }) => {
           </Center>
         </Box>
       )}
-
+      
       <video
-        src={item.videoURL}
         onMouseOver={(e) => {
           e.target.play();
           e.target.playbackRate = 2;
@@ -50,7 +50,10 @@ const ProjectPreview = ({ item }) => {
         style={{ objectFit: "cover", width: "100%", height: "100%" }}
         muted
         loop
-      ></video>
+      >
+        <source src={item.videoURL} type="video/webm" />
+        Your browser does not support the video format. 
+      </video>
     </Box>
   );
 };
