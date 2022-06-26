@@ -17,7 +17,8 @@ import {
   SiWordpress,
   SiRedux,
   SiFigma,
-  SiGraphql
+  SiGraphql,
+  SiTypescript
 } from "react-icons/si";
 
 const skillData = [
@@ -70,6 +71,11 @@ const skillData = [
     name: "Git",
     level: "Pro",
     icon: SiGit,
+  },
+  {
+    name: "TypeScript",
+    level: "Medium",
+    icon: SiTypescript
   },
   {
     name: "FireBase",
